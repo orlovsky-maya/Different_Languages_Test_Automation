@@ -8,9 +8,6 @@ def pytest_addoption(parser):
                      help="Choose language, example: fr, ru or es")
     parser.addoption('--browser_name', action='store', default=None,
                      help="Choose browser: chrome or firefox")
-    parser.addoption('--user_data_dir', action='store', default=None,
-                     help="Enter user directory for browser")
-
 
 @pytest.fixture(scope="function")
 def browser(request):
